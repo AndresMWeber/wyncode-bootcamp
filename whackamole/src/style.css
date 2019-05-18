@@ -1,0 +1,52 @@
+#score {
+    color: red;
+}
+
+body {
+    background-color: aquamarine;
+    text-align: center;
+}
+
+button {
+    width: 20%;
+    height: 2rem;
+}
+
+main {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    grid-column: 3;
+    grid-gap: 10px;
+}
+
+.guac-bowl {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.bowl {
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.avocado {
+    z-index: 1;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    margin: 0 auto;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.up {
+    bottom: 50px;
+}
