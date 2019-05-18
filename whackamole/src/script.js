@@ -12,19 +12,21 @@ function update() {
         var avocados = document.getElementsByClassName('avocado');
         var random_avocado = avocados[parseInt(Math.random() * avocados.length)];
         sprout(random_avocado);
-        setTimeout(() => shrink(random_avocado), 1500);
+        setTimeout(() => shrink(random_avocado), random_time(200, 2000));
     }
 }
 
 function update_score(value) {
     let score = document.getElementById('score');
     let currentScore = parseInt(score.textContent);
-
     score.textContent = currentScore + value;
-
-    if (currentScore == 10) {
+    if (parseInt(score.textContent) >= 10) {
         win();
     }
+}
+
+function random_time(min, max) {
+    return Math.round(Math.random() * (max - min) + min)
 }
 
 function win() {
@@ -39,7 +41,9 @@ function sprout(avocado) {
 }
 
 function shrink(avocado) {
-    avocado.classList.remove("up");
+    if (avocado.classList.contains("up")) {
+        avocado.classList.remove("up");
+    }
 }
 
 function bonk(avocado) {
