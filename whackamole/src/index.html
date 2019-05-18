@@ -7,14 +7,38 @@
     <title>Guacamole</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
+<!-- class is for multiple, id is single-->
 <body>
-    <h1>Wyntroduction</h1>
-    <h3>Guac-A-Mole</h3>
-    <button onclick="startGame()">start</button> 
-    <a href="www.wyncode.co">Wyncode</a>
-    <img src="media/avocado.png">
     <script src="script.js"></script>
+    <h1>Wyntroduction</h1>
+    <h3>Guac-A-Mole <span id="score">0</span>/10</h3>
+    <button onclick="startGame()">start</button>
+    <main>
+        <div class="guac-bowl">
+            <img src="media/bowl.png" class="bowl">
+            <img src="media/avocado.png" onclick="bonk(this)" class="avocado">
+        </div>
+        <div class="guac-bowl">
+            <img src="media/bowl.png" class="bowl">
+            <img src="media/avocado.png" onclick="bonk(this)" class="avocado">
+        </div>
+        <div class="guac-bowl">
+            <img src="media/bowl.png" class="bowl">
+            <img src="media/avocado.png" onclick="bonk(this)" class="avocado">
+        </div>
+        <div class="guac-bowl">
+            <img src="media/bowl.png" class="bowl">
+            <img src="media/avocado.png" onclick="bonk(this)" class="avocado">
+        </div>
+        <div class="guac-bowl">
+            <img src="media/bowl.png" class="bowl">
+            <img src="media/avocado.png" onclick="bonk(this)" class="avocado">
+        </div>
+        <div class="guac-bowl">
+            <img src="media/bowl.png" class="bowl">
+            <img src="media/avocado.png" onclick="bonk(this)" class="avocado">
+        </div>
+    </main>
 </body>
 
 </html>
